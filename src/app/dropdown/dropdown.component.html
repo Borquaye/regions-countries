@@ -1,0 +1,3 @@
+<select #dropdown [disabled]="disabled" (change)="onValueChange(dropdown.value)">
+  <option *ngFor="let item of _data" [value]="item.value">{{item.label}}</option>
+</select>

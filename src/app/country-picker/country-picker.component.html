@@ -1,6 +1,11 @@
-<label>Region</label>
-<app-dropdown [data]="regions$ | async" (valueChange)="onRegionChange($event)"></app-dropdown>
-
-
-<label>Country</label>
-<app-dropdown [data]="countriesInSelectedRegion$ | async" [disabled]="noRegionSelected" (valueChange)="onCountryChange($event)"></app-dropdown>
+<div class="control-container">
+  <div class="control-labeled">
+    <label>Region</label>
+    <app-dropdown [data]="regions$ | async" (valueChange)="onRegionChange($event)"></app-dropdown>
+  </div>
+  
+  <div class="control-labeled">
+    <label>Country</label>
+    <app-dropdown [data]="countriesInSelectedRegion$ | async" [disabled]="noRegionSelected" (valueChange)="onCountryChange($event)"></app-dropdown>
+  </div>
+</div>

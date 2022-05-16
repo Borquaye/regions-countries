@@ -1,29 +1,33 @@
-<div *ngIf="selectedCountry$ | async as country; else noCountrySelected">
-  <h1>Country Details</h1>
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Capital</th>
-      <th>Population</th>
-      <th>Currencies</th>
-      <th>Flag</th>
-    </tr>
-    <tr>
-      <td>{{country.name}}</td>
-      <td>{{country.capital}}</td>
-      <td>{{country.population | number}}</td>
-      <td>
-        <span *ngFor="let currency of country.currencies; let isLast = last">
-          {{currency.code}}<span *ngIf="!isLast">,</span>
-        </span>
-      </td>
-      <td>
-        <img [src]="country.flag" alt="country flag">
-      </td>
-    </tr>
-  </table>
+<div class="body-container">
+  <div *ngIf="selectedCountry$ | async as country; else noCountrySelected">
+    <h1>Country Details</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Capital</th>
+        <th>Population</th>
+        <th>Currencies</th>
+        <th>Flag</th>
+      </tr>
+      <tr>
+        <td>{{country.name}}</td>
+        <td>{{country.capital}}</td>
+        <td>{{country.population | number}}</td>
+        <td>
+          <span *ngFor="let currency of country.currencies; let isLast = last">
+            {{currency.code}}<span *ngIf="!isLast">,</span>
+          </span>
+        </td>
+        <td>
+          <img [src]="country.flag" alt="country flag">
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <ng-template #noCountrySelected>
+    <div class="info-text_centered">
+      <p>Please select a country</p>
+    </div>
+  </ng-template>
 </div>
-
-<ng-template #noCountrySelected>
-  <h2>Please select a country</h2>
-</ng-template>

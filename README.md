@@ -1,27 +1,23 @@
 # RegionsCountries
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+This project allows you to retrieve some details of target country.
 
-## Development server
+Countries are filtered based on region. Using the controls at the top, you can select a region which will then enable you to choose a country from that region. Once you select a country, its details will be displayed in a table.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![Example](src/assets/example.png)
 
-## Code scaffolding
+The countries are only loaded once a region is selected, and only the first time that region is selected in the session.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Running the project
 
-## Build
+Run `npm install` to download depenedancies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Additional features
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+In a real world scenario some logging and error handling systems should be put in place to monitor and manage unexpected problems

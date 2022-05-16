@@ -14,7 +14,11 @@ export class DropdownComponent {
   
   @Input() set data(data: DropdownItem[]) {
     const placeHolderItem = { label: this.placeholderText, value: '' };
-    this._data = [placeHolderItem, ...data];
+    if (data) {
+      this._data = [placeHolderItem, ...data];
+    } else {
+      this._data = [placeHolderItem]
+    }
   }
 
   @Output() valueChange = new EventEmitter<string>();

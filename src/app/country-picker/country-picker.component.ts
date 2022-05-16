@@ -28,7 +28,6 @@ export class CountryPickerComponent {
     if (newValue !== '') {
       this.noRegionSelected = false;
       this.store.dispatch(RegionsActions.setSelectedRegion({ region: newValue }));
-      this.store.dispatch(CountriesActions.loadCountriesForRegion({ region: newValue }));
     } else {
       this.noRegionSelected = true;
     }

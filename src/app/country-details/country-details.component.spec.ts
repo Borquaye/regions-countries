@@ -1,3 +1,4 @@
+import { provideMockStore } from '@ngrx/store/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CountryDetailsComponent } from './country-details.component';
@@ -8,7 +9,10 @@ describe('CountryDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CountryDetailsComponent ]
+      declarations: [ CountryDetailsComponent ],
+      providers: [
+        provideMockStore()
+      ]
     })
     .compileComponents();
   });

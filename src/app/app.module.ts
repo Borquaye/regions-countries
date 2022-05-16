@@ -11,6 +11,7 @@ import { reducers } from './store/reducers';
 import { CountriesEffects } from './countries/store/countries.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CountryDetailsComponent } from './country-details/country-details.component';
+import { RegionsEffects } from './regions/store/regions.effects';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { CountryDetailsComponent } from './country-details/country-details.compo
     BrowserModule,
     HttpClientModule,
     StoreModule.forRoot(reducers),
-    EffectsModule.forRoot([CountriesEffects]),
+    EffectsModule.forRoot([RegionsEffects, CountriesEffects]),
     StoreDevtoolsModule.instrument(),
   ],
   providers: [],

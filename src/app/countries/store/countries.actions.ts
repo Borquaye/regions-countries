@@ -2,7 +2,7 @@ import { createAction, props } from "@ngrx/store";
 
 export namespace CountriesActions {
   export const loadCountriesForRegion = createAction(
-    '[COUNTRY PICKER] Load Countries For Region',
+    '[REGION EFFECTS] Load Countries For Region',
     props<{ region: string }>()
   )
   export const loadCountriesForRegionSuccess = createAction(

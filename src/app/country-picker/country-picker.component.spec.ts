@@ -50,14 +50,6 @@ describe('CountryPickerComponent', () => {
         expect(store.dispatch).toHaveBeenCalledWith(expectedAction)
       })
   
-      it('should load the countries for the selected region', () => {
-        const expectedAction = CountriesActions.loadCountriesForRegion({ region: regionName })
-  
-        component.onRegionChange(regionName);
-  
-        expect(store.dispatch).toHaveBeenCalledWith(expectedAction)
-      })
-  
       it('should signify that a region has been selected', () => {
         component.onRegionChange(regionName);
   

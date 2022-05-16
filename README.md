@@ -1,8 +1,8 @@
 # RegionsCountries
 
-This project allows you to retrieve some details of target country.
+This project allows you to retrieve some details of a target country.
 
-Countries are filtered based on region. Using the controls at the top, you can select a region which will then enable you to choose a country from that region. Once you select a country, its details will be displayed in a table.
+Countries are filtered based on region. Using the controls at the top, you can select a region, which will then enable you to choose a country from that region. Once you select a country, its details will be displayed in a table.
 
 ![Example](src/assets/example.png)
 

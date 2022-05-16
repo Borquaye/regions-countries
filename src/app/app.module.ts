@@ -10,12 +10,14 @@ import { StoreModule } from '@ngrx/store';
 import { reducers } from './store/reducers';
 import { CountriesEffects } from './countries/store/countries.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { CountryDetailsComponent } from './country-details/country-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DropdownComponent,
-    CountryPickerComponent
+    CountryPickerComponent,
+    CountryDetailsComponent
   ],
   imports: [
     BrowserModule,
